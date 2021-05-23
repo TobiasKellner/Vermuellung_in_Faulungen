@@ -27,8 +27,8 @@ exifinfo<-exifinfo%>%left_join(Tabelle, by="SourceFile")
 
 exifinfo<-exifinfo%>%mutate(Farbe=case_when(Art=="Plastikmüll"~"orange",
                                             Art=="Restmüll"~"black",
-                                            Art=="Metall"~"red",
-                                            Art=="Glas"~"blue",
+                                            Art=="Metallmüll"~"red",
+                                            Art=="Glasmüll"~"blue",
                                             TRUE~"green"))
 ```
 
@@ -40,7 +40,7 @@ Dieses interaktive Dashboard wurde im Rahmen der Seminarfacharbeit von Victoria 
 Entwickelt und gewartet wird diese Seite von Tobias Kellner: 
 [https://github.com/TobiasKellner](https://github.com/TobiasKellner)\
 Diese interaktive Grafik dient dazu die Vermüllung rund um die Ortschaft Faulungen zu visualisieren.\
-Relevanz und Aktualität des Themas Umweltverschmutzung sollen somit wiedergegeben werden.\
+Relevanz und Aktualität des Themas Umweltverschmutzung auf regionaler Ebene sollen somit wiedergegeben werden.\
 Nach dem Klicken auf den jeweiligen Kreis erscheint ein Foto des Mülls. Der Müll wurde nach dem Erstellen des Fotos aufgesammelt, mitgenommen und entsorgt, sofern dies logistisch möglich war.
 
 
@@ -59,6 +59,6 @@ leaflet() %>%
     popup = paste0("<img src=",exifinfo$SourceFile," width = 300 />"),
     color=~Farbe,
     opacity=0.5)%>%
-  addLegend(colors = c("orange", "black", "red", "blue"), labels = c("Plastikmüll","Restmüll","Metall","Glas"))
+  addLegend(colors = c("orange", "black", "red", "blue"), labels = c("Plastikmüll","Restmüll","Metallmüll","Glasmüll"))
 ```
 
