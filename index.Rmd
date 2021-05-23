@@ -27,8 +27,8 @@ exifinfo<-exifinfo%>%left_join(Tabelle, by="SourceFile")
 
 exifinfo<-exifinfo%>%mutate(Farbe=case_when(Art=="Plastikmüll"~"orange",
                                             Art=="Restmüll"~"black",
-                                            Art=="Metallmüll"~"red",
-                                            Art=="Glasmüll"~"blue",
+                                            Art=="Metall"~"red",
+                                            Art=="Glas"~"blue",
                                             TRUE~"green"))
 ```
 
