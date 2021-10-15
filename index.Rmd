@@ -16,7 +16,7 @@ library(leafpop)
 ```
 
 ```{r}
-files <- list.files(recursive=TRUE, pattern=c("*.JPG|*.jpg"), full.names=TRUE)
+files <- list.files(recursive=TRUE, pattern=c("*.JPG|*.jpg|*.jpeg|*.png|*.PNG"), full.names=TRUE)
 exifinfo <- read_exif(files)%>%filter(Directory==".")
 
 #tibble(Foto=files)%>%openxlsx::write.xlsx("Tabelle.xlsx")
