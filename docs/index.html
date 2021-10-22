@@ -24,8 +24,8 @@ window.FlexDashboardComponents = [];
 <script id="flexdashboard-navbar" type="application/json">
 [{"icon":"fa-share-alt","items":[{"title":"Twitter","icon":"fa-twitter"},{"title":"Facebook","icon":"fa-facebook"},{"title":"Google+","icon":"fa-google-plus"},{"title":"LinkedIn","icon":"fa-linkedin"},{"title":"Pinterest","icon":"fa-pinterest"}]}]
 </script>
-<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -843,6 +843,7 @@ html, body {
 </div><!--/.container-->
 </div><!--/.navbar-->
 
+<img class="mobile-figure" data-mobile-figure-id=fig1 src="index_files/figure-html/unnamed-chunk-8-1.mb.png" />
 <script type="text/javascript">
 
 
@@ -2638,6 +2639,8 @@ window.FlexDashboardComponents.push({
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
+<div id="karte" class="section level1">
+<h1>Karte</h1>
 <div id="column" class="section level2 sidebar">
 <h2 class="sidebar">Column</h2>
 <p>Dieses interaktive Dashboard wurde im Rahmen der Seminarfacharbeit von Victoria Kellner erstellt.<br />
@@ -2648,13 +2651,65 @@ Nach dem Klicken auf den jeweiligen Kreis erscheint ein Foto des Mülls. Der Mü
 </div>
 <div id="column-1" class="section level2" data-width="650">
 <h2 data-width="650">Column</h2>
-<div id="karte" class="section level3">
+<div id="karte-1" class="section level3">
 <h3>Karte</h3>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div id="htmlwidget-2e9616685b89748d6141" style="width:576px;height:460.8px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2e9616685b89748d6141">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[51.2029388888889,51.1992444444444,51.20105,51.1971666666667,51.1992388888889,51.1940944444444,51.1974111111111,51.1971361111111,51.1971638888889,51.1974805555556,51.1993444444444,51.2002916666667,51.1967361111111,51.199275,51.2014611111111,51.1980527777778,51.1994361111111,51.2002305555556,51.2015388888889,51.1972833333333,51.2014277777778,51.2029416666667,51.1967055555556,51.1974027777778,51.1974027777778,51.1973305555556,51.1859333333333,51.1971444444444,51.2014888888889,51.1971333333333,51.1972083333333,51.1932444444444,51.1974055555556,51.19955,51.1995611111111,51.1971666666667,51.1971944444444,51.1988527777778,51.1959444444444,51.1994027777778,51.2029416666667,51.1967,51.2029083333333,51.1971277777778,51.1980638888889,51.2173055555556,51.1956361111111,51.199,51.1996305555556,51.1996833333333,51.1997083333333,51.1997138888889,51.1994694444444,51.1993472222222,51.1994222222222,51.1994222222222,51.1993444444444,51.1991916666667,51.1995666666667,51.19965,51.1985194444444,null,null,51.1945444444444,51.1987111111111,51.1988527777778],[10.2534083333333,10.2572333333333,10.2409333333333,10.2919166666667,10.2575277777778,10.2563583333333,10.2868,10.2918527777778,10.2916083333333,10.286625,10.2574166666667,10.2555472222222,10.2823638888889,10.2575388888889,10.2510611111111,10.256,10.2574027777778,10.2575555555556,10.2509777777778,10.2800416666667,10.2510222222222,10.2534555555556,10.2817722222222,10.2902416666667,10.2902416666667,10.279925,10.2953916666667,10.2917861111111,10.251075,10.2918222222222,10.2920722222222,10.261575,10.2902416666667,10.2574611111111,10.2574361111111,10.2919083333333,10.2920472222222,10.2559777777778,10.27175,10.2573861111111,10.2534555555556,10.2810388888889,10.2533888888889,10.2918666666667,10.2559027777778,10.2208916666667,10.2559916666667,10.2561666666667,10.2575583333333,10.2571777777778,10.2571027777778,10.2568638888889,10.2571805555556,10.2574916666667,10.2574694444444,10.2574694444444,10.2574722222222,10.2578444444444,10.2574194444444,10.2573666666667,10.2573222222222,null,null,10.2561416666667,10.2537472222222,10.2535527777778],10,null,null,{"interactive":true,"className":"","stroke":true,"color":["green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","orange","black","orange","red","orange","red","blue","black","black","orange","green","orange","blue","orange","black","black","green","green","green","green","green"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","green","orange","black","orange","red","orange","red","blue","black","black","orange","green","orange","blue","orange","black","black","green","green","green","green","green"],"fillOpacity":0.2},null,null,["<img src=./027102CF-749D-437C-9EA8-02DC18BD38FE.jpeg width = 300 />","<img src=./1098E4EE-E70F-460B-8554-79C17250FD74.jpeg width = 300 />","<img src=./176905F5-9DB5-4828-8999-A4749B4CEC7A.jpeg width = 300 />","<img src=./180A320F-DA04-4E4C-B104-93DE2CD3D91F.jpeg width = 300 />","<img src=./19DF500D-E1FD-47C2-823D-4C26E13C4C81.jpeg width = 300 />","<img src=./1B70579C-CC10-4D13-AD10-C533A381F76B.jpeg width = 300 />","<img src=./219BB915-A3E8-41C2-824A-36DEBC72D4B7.jpeg width = 300 />","<img src=./220A0903-E988-4DE1-8075-9D338DB112E8.jpeg width = 300 />","<img src=./2623170D-2C4F-46A1-BC1B-B1ABEB40689F.jpeg width = 300 />","<img src=./2C0E20ED-40EE-4005-A522-4C656DD7AB8A.jpeg width = 300 />","<img src=./31C76A33-8843-4F1A-9811-D96D16D7196A.jpeg width = 300 />","<img src=./320C673F-1AD0-4E24-84A8-476CDD7E65BB.jpeg width = 300 />","<img src=./39E85353-AB45-4609-B330-C9D6FDFEF920.jpeg width = 300 />","<img src=./42653D27-B097-4262-990E-93FB40BC7308.jpeg width = 300 />","<img src=./4388BCF3-579A-4B4F-A885-65ED60390F50.jpeg width = 300 />","<img src=./47F7D430-A600-4BC2-8309-68B0DBC3CB5B.jpeg width = 300 />","<img src=./48E3D5F5-B94A-4A04-9B2F-D37B4D7A2711.jpeg width = 300 />","<img src=./4A904390-99B2-4CF3-9E11-3910F4EBFC07.jpeg width = 300 />","<img src=./600FC6AD-374A-4636-B1F6-4B4693A892C3.jpeg width = 300 />","<img src=./65FE42AD-557A-40DE-B943-B6B65715107B.jpeg width = 300 />","<img src=./6CB93615-6358-4F5F-9831-CDD2770351A0.jpeg width = 300 />","<img src=./7D371188-3B87-456C-87F2-D04F27F5ACB6.jpeg width = 300 />","<img src=./7D66CDBF-16D1-4722-9B58-F32130D259F2.jpeg width = 300 />","<img src=./803E8166-F282-45F7-824D-FAD50068055E.jpeg width = 300 />","<img src=./82FB84BB-9D4E-4D25-AF8C-5030B10A57C9.jpeg width = 300 />","<img src=./83FD4053-7185-4161-84F7-1B280B8CCC56.jpeg width = 300 />","<img src=./87E22596-F069-4DF4-B5F3-8223FEFA6C14.jpeg width = 300 />","<img src=./8AA13DA5-172D-4855-9A65-188FB0B1DCA8.jpeg width = 300 />","<img src=./9BD714A0-03E7-42D0-8A18-522E9C220738.jpeg width = 300 />","<img src=./9FA993F7-9D55-4158-938F-6A0802395780.jpeg width = 300 />","<img src=./A1F09586-AB6A-4657-808B-2415B8FECCD3.jpeg width = 300 />","<img src=./A7C97AD9-A670-4C7B-AD0E-C0EC20B759B5.jpeg width = 300 />","<img src=./AF4DF9AF-60C2-429F-9ACB-20FAF7A9B7DB.jpeg width = 300 />","<img src=./B386881F-DF76-4F9A-917D-C0729F71607B.jpeg width = 300 />","<img src=./B8C2DDB8-D30E-405C-BB84-6405F7FF261B.jpeg width = 300 />","<img src=./BE90BC2B-B1F2-4B77-9FE8-74E5DC54B391.jpeg width = 300 />","<img src=./C23CA070-E68F-426C-9FEA-9BDFE97269A9.jpeg width = 300 />","<img src=./C2452BD7-89FC-484A-8FCF-1FB38BD282E7.jpeg width = 300 />","<img src=./CC03EA2B-FB84-483C-B518-B74ECEE7094F.jpeg width = 300 />","<img src=./D007745F-A127-47CA-BD02-0F3A21B055BF.jpeg width = 300 />","<img src=./DAE27D39-E939-4614-9FC6-2FD276816066.jpeg width = 300 />","<img src=./E214BCA8-6DEF-41D8-B896-B8238E93E6E1.jpeg width = 300 />","<img src=./F50E23DB-2E9B-4C90-8B03-948B36BF1BE7.jpeg width = 300 />","<img src=./F9EA2B8F-E3CD-4C56-8C03-BAA39BCAF800.jpeg width = 300 />","<img src=./FA645CD3-8EDB-4E0E-A8B9-32E69AE0E328.jpeg width = 300 />","<img src=./IMG_6349.JPG width = 300 />","<img src=./IMG_6350.JPG width = 300 />","<img src=./IMG_6351.JPG width = 300 />","<img src=./IMG_6352.JPG width = 300 />","<img src=./IMG_6353.JPG width = 300 />","<img src=./IMG_6354.JPG width = 300 />","<img src=./IMG_6355.JPG width = 300 />","<img src=./IMG_6356.JPG width = 300 />","<img src=./IMG_6357.JPG width = 300 />","<img src=./IMG_6358.JPG width = 300 />","<img src=./IMG_6358.png width = 300 />","<img src=./IMG_6359.JPG width = 300 />","<img src=./IMG_6360.JPG width = 300 />","<img src=./IMG_6361.JPG width = 300 />","<img src=./IMG_6362.JPG width = 300 />","<img src=./IMG_6364.JPG width = 300 />","<img src=./IMG_6364.png width = 300 />","<img src=./IMG_6633.JPG width = 300 />","<img src=./IMG_6634.JPG width = 300 />","<img src=./IMG_6635.JPG width = 300 />","<img src=./IMG_6636.JPG width = 300 />"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["orange","black","red","blue"],"labels":["Plastikmüll","Restmüll","Metallmüll","Glasmüll"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"topright","type":"unknown","title":null,"extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[51.1859333333333,51.2173055555556],"lng":[10.2208916666667,10.2953916666667]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6369332878ddbfc8f126" style="width:576px;height:460.8px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6369332878ddbfc8f126">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[51.2029388888889,51.1992444444444,51.20105,51.1971666666667,51.1992388888889,51.1940944444444,51.1974111111111,51.1971361111111,51.1971638888889,51.1974805555556,51.1993444444444,51.2002916666667,51.1967361111111,51.199275,51.2014611111111,51.1980527777778,51.1994361111111,51.2002305555556,51.2015388888889,51.1972833333333,51.2014277777778,51.2029416666667,51.1967055555556,51.1974027777778,51.1973305555556,51.1859333333333,51.1971444444444,51.2014888888889,51.1971333333333,51.1972083333333,51.1932444444444,51.1974055555556,51.19955,51.1995611111111,51.1971666666667,51.1971944444444,51.1988527777778,51.1959444444444,51.1994027777778,51.2029416666667,51.1967,51.2029083333333,51.1980638888889,51.1956361111111,51.199,51.1996305555556,51.1996833333333,51.1997083333333,51.1997138888889,51.1994694444444,51.1993472222222,51.1994222222222,51.1993444444444,51.1991916666667,51.1995666666667,51.19965,51.1985194444444,null,null,51.1945444444444,51.1987111111111,51.1988527777778],[10.2534083333333,10.2572333333333,10.2409333333333,10.2919166666667,10.2575277777778,10.2563583333333,10.2868,10.2918527777778,10.2916083333333,10.286625,10.2574166666667,10.2555472222222,10.2823638888889,10.2575388888889,10.2510611111111,10.256,10.2574027777778,10.2575555555556,10.2509777777778,10.2800416666667,10.2510222222222,10.2534555555556,10.2817722222222,10.2902416666667,10.279925,10.2953916666667,10.2917861111111,10.251075,10.2918222222222,10.2920722222222,10.261575,10.2902416666667,10.2574611111111,10.2574361111111,10.2919083333333,10.2920472222222,10.2559777777778,10.27175,10.2573861111111,10.2534555555556,10.2810388888889,10.2533888888889,10.2559027777778,10.2559916666667,10.2561666666667,10.2575583333333,10.2571777777778,10.2571027777778,10.2568638888889,10.2571805555556,10.2574916666667,10.2574694444444,10.2574722222222,10.2578444444444,10.2574194444444,10.2573666666667,10.2573222222222,null,null,10.2561416666667,10.2537472222222,10.2535527777778],10,null,null,{"interactive":true,"className":"","stroke":true,"color":["black","orange","orange","orange","orange","orange","blue","orange","black","orange","blue","black","orange","orange","green","black","red","blue","black","blue","red","red","orange","blue","red","black","orange","red","orange","black","black","blue","orange","red","blue","orange","black","blue","orange","green","blue","black","red","black","orange","red","orange","red","green","black","black","orange","orange","green","orange","black","black","yellow","black","orange","black","orange"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["black","orange","orange","orange","orange","orange","blue","orange","black","orange","blue","black","orange","orange","green","black","red","blue","black","blue","red","red","orange","blue","red","black","orange","red","orange","black","black","blue","orange","red","blue","orange","black","blue","orange","green","blue","black","red","black","orange","red","orange","red","green","black","black","orange","orange","green","orange","black","black","yellow","black","orange","black","orange"],"fillOpacity":0.2},null,null,["<img src=./027102CF-749D-437C-9EA8-02DC18BD38FE.jpeg width = 300 />","<img src=./1098E4EE-E70F-460B-8554-79C17250FD74.jpeg width = 300 />","<img src=./176905F5-9DB5-4828-8999-A4749B4CEC7A.jpeg width = 300 />","<img src=./180A320F-DA04-4E4C-B104-93DE2CD3D91F.jpeg width = 300 />","<img src=./19DF500D-E1FD-47C2-823D-4C26E13C4C81.jpeg width = 300 />","<img src=./1B70579C-CC10-4D13-AD10-C533A381F76B.jpeg width = 300 />","<img src=./219BB915-A3E8-41C2-824A-36DEBC72D4B7.jpeg width = 300 />","<img src=./220A0903-E988-4DE1-8075-9D338DB112E8.jpeg width = 300 />","<img src=./2623170D-2C4F-46A1-BC1B-B1ABEB40689F.jpeg width = 300 />","<img src=./2C0E20ED-40EE-4005-A522-4C656DD7AB8A.jpeg width = 300 />","<img src=./31C76A33-8843-4F1A-9811-D96D16D7196A.jpeg width = 300 />","<img src=./320C673F-1AD0-4E24-84A8-476CDD7E65BB.jpeg width = 300 />","<img src=./39E85353-AB45-4609-B330-C9D6FDFEF920.jpeg width = 300 />","<img src=./42653D27-B097-4262-990E-93FB40BC7308.jpeg width = 300 />","<img src=./4388BCF3-579A-4B4F-A885-65ED60390F50.jpeg width = 300 />","<img src=./47F7D430-A600-4BC2-8309-68B0DBC3CB5B.jpeg width = 300 />","<img src=./48E3D5F5-B94A-4A04-9B2F-D37B4D7A2711.jpeg width = 300 />","<img src=./4A904390-99B2-4CF3-9E11-3910F4EBFC07.jpeg width = 300 />","<img src=./600FC6AD-374A-4636-B1F6-4B4693A892C3.jpeg width = 300 />","<img src=./65FE42AD-557A-40DE-B943-B6B65715107B.jpeg width = 300 />","<img src=./6CB93615-6358-4F5F-9831-CDD2770351A0.jpeg width = 300 />","<img src=./7D371188-3B87-456C-87F2-D04F27F5ACB6.jpeg width = 300 />","<img src=./7D66CDBF-16D1-4722-9B58-F32130D259F2.jpeg width = 300 />","<img src=./82FB84BB-9D4E-4D25-AF8C-5030B10A57C9.jpeg width = 300 />","<img src=./83FD4053-7185-4161-84F7-1B280B8CCC56.jpeg width = 300 />","<img src=./87E22596-F069-4DF4-B5F3-8223FEFA6C14.jpeg width = 300 />","<img src=./8AA13DA5-172D-4855-9A65-188FB0B1DCA8.jpeg width = 300 />","<img src=./9BD714A0-03E7-42D0-8A18-522E9C220738.jpeg width = 300 />","<img src=./9FA993F7-9D55-4158-938F-6A0802395780.jpeg width = 300 />","<img src=./A1F09586-AB6A-4657-808B-2415B8FECCD3.jpeg width = 300 />","<img src=./A7C97AD9-A670-4C7B-AD0E-C0EC20B759B5.jpeg width = 300 />","<img src=./AF4DF9AF-60C2-429F-9ACB-20FAF7A9B7DB.jpeg width = 300 />","<img src=./B386881F-DF76-4F9A-917D-C0729F71607B.jpeg width = 300 />","<img src=./B8C2DDB8-D30E-405C-BB84-6405F7FF261B.jpeg width = 300 />","<img src=./BE90BC2B-B1F2-4B77-9FE8-74E5DC54B391.jpeg width = 300 />","<img src=./C23CA070-E68F-426C-9FEA-9BDFE97269A9.jpeg width = 300 />","<img src=./C2452BD7-89FC-484A-8FCF-1FB38BD282E7.jpeg width = 300 />","<img src=./CC03EA2B-FB84-483C-B518-B74ECEE7094F.jpeg width = 300 />","<img src=./D007745F-A127-47CA-BD02-0F3A21B055BF.jpeg width = 300 />","<img src=./DAE27D39-E939-4614-9FC6-2FD276816066.jpeg width = 300 />","<img src=./E214BCA8-6DEF-41D8-B896-B8238E93E6E1.jpeg width = 300 />","<img src=./F50E23DB-2E9B-4C90-8B03-948B36BF1BE7.jpeg width = 300 />","<img src=./FA645CD3-8EDB-4E0E-A8B9-32E69AE0E328.jpeg width = 300 />","<img src=./IMG_6350.JPG width = 300 />","<img src=./IMG_6351.JPG width = 300 />","<img src=./IMG_6352.JPG width = 300 />","<img src=./IMG_6353.JPG width = 300 />","<img src=./IMG_6354.JPG width = 300 />","<img src=./IMG_6355.JPG width = 300 />","<img src=./IMG_6356.JPG width = 300 />","<img src=./IMG_6357.JPG width = 300 />","<img src=./IMG_6358.JPG width = 300 />","<img src=./IMG_6359.JPG width = 300 />","<img src=./IMG_6360.JPG width = 300 />","<img src=./IMG_6361.JPG width = 300 />","<img src=./IMG_6362.JPG width = 300 />","<img src=./IMG_6364.JPG width = 300 />","<img src=./IMG_6364.png width = 300 />","<img src=./IMG_6633.JPG width = 300 />","<img src=./IMG_6634.JPG width = 300 />","<img src=./IMG_6635.JPG width = 300 />","<img src=./IMG_6636.JPG width = 300 />"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["orange","black","red","blue","green"],"labels":["Plastikmüll","Restmüll","Metall","Papiermüll","Glasmüll"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"topright","type":"unknown","title":null,"extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[51.1859333333333,51.2029416666667],"lng":[10.2409333333333,10.2953916666667]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="statistik" class="section level1">
+<h1>Statistik</h1>
+<div id="column-2" class="section level2" data-width="100">
+<h2 data-width="100">Column</h2>
+<div id="plastikmüll" class="section level3 value-box">
+<h3 class="value-box">Plastikmüll</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<p><span class="value-output" data-caption="Plastikmüll" data-icon="" data-color="orange">22</span></p>
+</div>
+<div id="restmüll" class="section level3 value-box">
+<h3 class="value-box">Restmüll</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<p><span class="value-output" data-caption="Restmüll" data-icon="" data-color="grey">17</span></p>
+</div>
+<div id="metall" class="section level3 value-box">
+<h3 class="value-box">Metall</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<p><span class="value-output" data-caption="Metall" data-icon="" data-color="red">9</span></p>
+</div>
+<div id="papiermüll" class="section level3 value-box">
+<h3 class="value-box">Papiermüll</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<p><span class="value-output" data-caption="Papiermüll" data-icon="" data-color="blue">9</span></p>
+</div>
+<div id="glas" class="section level3 value-box">
+<h3 class="value-box">Glas</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<p><span class="value-output" data-caption="Glas" data-icon="" data-color="green">4</span></p>
+</div>
+</div>
+<div id="column-3" class="section level2" data-width="425">
+<h2 data-width="425">Column</h2>
+<div id="statistik-1" class="section level3">
+<h3>Statistik</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" width="576" data-figure-id=fig1 /></p>
+</div>
 </div>
 </div>
 
@@ -2681,7 +2736,7 @@ $(document).ready(function () {
   FlexDashboard.init({
     theme: "cosmo",
     fillPage: true,
-    orientation: "rows",
+    orientation: "columns",
     storyboard: false,
     defaultFigWidth: 576,
     defaultFigHeight: 460,

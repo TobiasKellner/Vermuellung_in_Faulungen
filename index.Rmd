@@ -2,7 +2,7 @@
 title: "Vermüllung rund um Faulungen"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: rows
+    orientation: columns
     social: menu
 ---
 
@@ -19,7 +19,9 @@ library(leafpop)
 files <- list.files(recursive=TRUE, pattern=c("*.JPG|*.jpg|*.jpeg|*.png|*.PNG"), full.names=TRUE)
 exifinfo <- read_exif(files)%>%filter(Directory==".")
 
-#tibble(Foto=files)%>%openxlsx::write.xlsx("Tabelle.xlsx")
+#tibble(Foto=files)%>%
+#  left_join(Tabelle%>%rename(Foto=1), by="Foto")%>%
+#  openxlsx::write.xlsx("Tabelle_neu.xlsx")
 
 Tabelle<-openxlsx::read.xlsx("Tabelle.xlsx")
 
@@ -28,13 +30,14 @@ exifinfo<-exifinfo%>%left_join(Tabelle, by="SourceFile")
 exifinfo<-exifinfo%>%mutate(Farbe=case_when(Art=="Plastikmüll"~"orange",
                                             Art=="Restmüll"~"black",
                                             Art=="Metall"~"red",
-                                            Art=="Glas"~"blue",
-                                            TRUE~"green"))
+                                            Art=="Papiermüll"~"blue",
+                                            Art=="Glas"~"green",
+                                            TRUE~"yellow"))
 ```
 
+# Karte
 
-Column {.sidebar}
------------------------------------------------------------------------
+## Column {.sidebar}
 
 Dieses interaktive Dashboard wurde im Rahmen der Seminarfacharbeit von Victoria Kellner erstellt.\
 Entwickelt und gewartet wird diese Seite von Tobias Kellner: 
@@ -43,9 +46,7 @@ Diese interaktive Grafik dient dazu die Vermüllung rund um die Ortschaft Faulun
 Relevanz und Aktualität des Themas Umweltverschmutzung auf regionaler Ebene sollen somit wiedergegeben werden.\
 Nach dem Klicken auf den jeweiligen Kreis erscheint ein Foto des Mülls. Der Müll wurde nach dem Erstellen des Fotos aufgesammelt, mitgenommen und entsorgt, sofern dies logistisch möglich war.
 
-
-Column {data-width=650}
------------------------------------------------------------------------
+## Column {data-width=650}
 
 ### Karte
 
@@ -59,6 +60,64 @@ leaflet() %>%
     popup = paste0("<img src=",exifinfo$SourceFile," width = 300 />"),
     color=~Farbe,
     opacity=0.5)%>%
-  addLegend(colors = c("orange", "black", "red", "blue"), labels = c("Plastikmüll","Restmüll","Metallmüll","Glasmüll"))
+  addLegend(colors = c("orange", "black", "red", "blue","green"), labels = c("Plastikmüll","Restmüll","Metall","Papiermüll","Glasmüll"))
 ```
 
+
+# Statistik
+
+## Column {data-width=100}
+
+### Plastikmüll {.value-box}
+```{r}
+valueBox(value=exifinfo%>%filter(Art=="Plastikmüll")%>%nrow(),
+         caption = "Plastikmüll",
+         color="orange",
+         icon="")
+```
+
+### Restmüll {.value-box}
+```{r}
+valueBox(value=exifinfo%>%filter(Art=="Restmüll")%>%nrow(),
+         caption = "Restmüll",
+         color="grey",
+         icon="")
+```
+
+### Metall {.value-box}
+```{r}
+valueBox(value=exifinfo%>%filter(Art=="Metall")%>%nrow(),
+         caption = "Metall",
+         color="red",
+         icon="")
+```
+
+### Papiermüll {.value-box}
+```{r}
+valueBox(value=exifinfo%>%filter(Art=="Papiermüll")%>%nrow(),
+         caption = "Papiermüll",
+         color="blue",
+         icon="")
+```
+
+### Glas {.value-box}
+```{r}
+valueBox(value=exifinfo%>%filter(Art=="Glas")%>%nrow(),
+         caption = "Glas",
+         color="green",
+         icon="")
+```
+
+
+## Column {data-width=425}
+
+### Statistik
+```{r}
+exifinfo%>%
+  group_by(Art)%>%
+  tally()%>%
+  filter(!is.na(Art))%>%
+  ggplot(aes(x=Art, y=n, fill=Art))+
+  geom_bar(stat = "identity")+ 
+  scale_fill_manual("Art des Mülls", values = c("Plastikmüll" = "#e67e22", "Restmüll" = "#707b7c", "Metall" = "#b03a2e","Papiermüll" = "#3498db","Glas" = "#2ecc71"))
+```
